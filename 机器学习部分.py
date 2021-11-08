@@ -42,7 +42,8 @@ def km_hero(data):
     :return: None
     """
     # 数据筛选
-    data = data.ix[:,["正补/10分钟","击杀"]]
+    print(data)
+    data = data.loc[:,["正补/10分钟","击杀"]]
     
     # 进行K-means聚类
     km = KMeans(n_clusters=4) # 构建估计器实例
